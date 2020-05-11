@@ -24,14 +24,15 @@ h1 {
   font-family: Helvetica;
 }
 
-p {
-  font-family: Georgia;
-}
 
-.grid {
-  padding: 8px;
-  font-family: Helvetica;
-}
+  li {
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #2980b9;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 4px 12px;
+    display: inline;
+  }
 
 form {
   padding: 8px;

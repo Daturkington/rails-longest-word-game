@@ -1,12 +1,14 @@
 <h1>New Game</h1>
 
-<p class="grid"><% @letters.each do |letter| %>
-    <%= letter%>
- <% end %>
-</p>
+<ul class="letters">
+  <% @letters.each do |letter| %>
+    <li><%= letter %></li>
+  <% end %>
+</ul>
 
-<form action="/score" method="post">
-  <input type="text" name="answer" placeholder="longest word">
+<form action="/score" method="POST" class="form-inline">
+  <input type="text" name="word" placeholder="longest word">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
   <input type="submit" value="Play">
 </form>
